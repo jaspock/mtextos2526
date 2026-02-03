@@ -28,7 +28,7 @@ This will automatically push your build to the `gh-pages` branch. More informati
 
 ## Contributors
 
-We welcome and recognize all contributions.
+We welcome and recognize contributions.
 
 ## Credits
 
