@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Análisis semántico vectorial &#8212; Minería de Textos</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo-master-ca.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Minería de Textos</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Materiales de Minería de Textos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque TÉCNICAS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque2.html">
+   1. Técnicas para la minería de textos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque PLN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque1.html">
+   2. Introducción. Minería de textos y procesamiento del lenguaje natural
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque APLICACIONES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3.html">
+   3. Aplicaciones de la minería de textos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/bloque1_4AnalisisSemanticoVectorial.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos">
+   Objetivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion">
+   Introducción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#origen-computacional">
+   Origen computacional
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fundamentos-linguisticos">
+   Fundamentos lingüísticos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representacion-vectorial-del-significado">
+   Representación vectorial del significado
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacion-del-contexto">
+     Representación del contexto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacion-de-las-palabras">
+     Representación de las palabras
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculo-de-los-valores-o-pesos">
+     Cálculo de los valores o pesos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tf-idf-term-frequency-inverse-document-frequency-sparck-jones-1972">
+       TF/IDF:
+       <em>
+        term frequency / inverse document frequency
+       </em>
+       (Sparck Jones, 1972)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ppmi-point-wise-mutual-information-church-y-hanks-1990">
+       PPMI: Point Wise Mutual Information (Church y Hanks 1990)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriz-dispersa-y-matriz-densa">
+     Matriz dispersa y matriz densa
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretacion-semantica-distancia-y-similitud">
+   Interpretación semántica: distancia y similitud.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusiones">
+     Conclusiones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#herramientas-y-recursos">
+   Herramientas y recursos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliografia">
+   Bibliografía
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cuestionario-de-aprendizaje">
+   Cuestionario de aprendizaje
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Análisis semántico vectorial</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos">
+   Objetivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion">
+   Introducción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#origen-computacional">
+   Origen computacional
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fundamentos-linguisticos">
+   Fundamentos lingüísticos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representacion-vectorial-del-significado">
+   Representación vectorial del significado
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacion-del-contexto">
+     Representación del contexto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representacion-de-las-palabras">
+     Representación de las palabras
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculo-de-los-valores-o-pesos">
+     Cálculo de los valores o pesos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tf-idf-term-frequency-inverse-document-frequency-sparck-jones-1972">
+       TF/IDF:
+       <em>
+        term frequency / inverse document frequency
+       </em>
+       (Sparck Jones, 1972)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ppmi-point-wise-mutual-information-church-y-hanks-1990">
+       PPMI: Point Wise Mutual Information (Church y Hanks 1990)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriz-dispersa-y-matriz-densa">
+     Matriz dispersa y matriz densa
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretacion-semantica-distancia-y-similitud">
+   Interpretación semántica: distancia y similitud.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusiones">
+     Conclusiones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#herramientas-y-recursos">
+   Herramientas y recursos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliografia">
+   Bibliografía
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cuestionario-de-aprendizaje">
+   Cuestionario de aprendizaje
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="analisis-semantico-vectorial">
+<span id="label-semantica-vectorial"></span><h1>Análisis semántico vectorial<a class="headerlink" href="#analisis-semantico-vectorial" title="Permalink to this headline">#</a></h1>
+<p>Borja Navarro Colorado</p>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<p>Para completar este tema debéis leer el capítulo 6 “Vector Semantics and Embeddings” del libro de Jurafsky y Martin (2023) <em>Speech and language processing</em>, donde se amplía y se dan detalles (sobre todo matemáticos) de las ideas aquí expuestas. Debes leer hasta la sección 6.6. Lee también la sección 6.8 (“word2vec”), pero no te preocupes si algún concepto no queda claro porque en temas siguientes se volverá a esto. El resto del capítulo es lectura opcional.</p>
+<p>Como <strong>lectura opcional</strong> para profundizar en cómo un vector puede representar el significado de palabras y oraciones, os recomiendo este artículo:</p>
+<ul class="simple">
+<li><p>Peter D. Turney y Patrick Pantel (2010) “From Frequency to Meaning: Vector Space Models of Semantics” en <em>Journal of Artificial Intelligence  Research</em>, 37, págs. 141-188.  DOI: <a class="reference external" href="https://doi.org/10.1613/jair.2934">https://doi.org/10.1613/jair.2934</a></p></li>
+</ul>
+<p><a class="reference external" href="https://www.jair.org/index.php/jair/article/view/10640">https://www.jair.org/index.php/jair/article/view/10640</a></p>
+<p><a class="reference external" href="https://www.jair.org/index.php/jair/article/view/10640/25440">https://www.jair.org/index.php/jair/article/view/10640/25440</a></p>
+</div>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">#</a></h2>
+<p>En este tema se expone la semántica distribucional, modelo semántico en el que se basan los actuales sistemas de <em>deep learning</em>. Tras definir la semántica distribucional, se mostrará cómo se puede representar el significado mediante vectores, los principales factores que determinan la representación vectorial y finalmente los conceptos de distancia y similitud textual.</p>
+</section>
+<section id="introduccion">
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
+<p>La semántica vectorial es un aproximación <strong>formal</strong> a la <strong>semántica</strong> de las lenguas naturales. A diferencia de otros modelos computacionales, el formalismo está basado en espacios vectoriales y álgebra lineal; y la interpretación de un texto se expresa en términos geométricos de distancia y similitud (Widdows 2004).</p>
+<p>Desde un punto de vista lingüístico, el modelo semántico vectorial representa el significado distribucional de las palabras. Como se comentará luego, el significado distribucional es aquél que podemos derivar a partir del contexto en el que una palabra es utilizada. En este modelo, el significado no es una unidad atómica como en lógica forma ni está definido en un diccionario, sino que es el propio uso de cada palabra en los diferentes contextos donde suele aparecer.</p>
+</section>
+<section id="origen-computacional">
+<h2>Origen computacional<a class="headerlink" href="#origen-computacional" title="Permalink to this headline">#</a></h2>
+<p>La aplicación de modelos vectoriales para procesar texto proviene del área llamada <strong>Recuperación de información</strong> (<em>Information Retrieval</em>). En esta área se desarrollan sistemas que, dada una consulta, recupera un conjunto de documentos ordenados de mayor a menor relevancia. El producto más conocido desarrollado en esta área son los buscadores de internet.</p>
+<p>Para determinar la relación de la consulta (conjunto de palabras) con los documentos, éstos se representan mediante una matriz término-documento. En este matriz, cada palabra está representada por su relevancia en cada documento (por ejemplo, mediante su frecuencia). Así, dada una palabra (en la cosulta), se pude derivar en qué documentos esa palabra es más relevante. Estos modelos se llaman también ``modelos de bolsa de palabras’’ (<em>bag of words</em>) porque las palabras se tratan como un conjunto sin orden ni relación entre ellas. En su estado mas básico se ignora la información categorial, sintáctica, etc. del texto.</p>
+<p>En esta matriz, por tanto, cada columna representa un documento y cada línea una palabra o término. El valor de cada celda es la relevancia del término o palabra en el documento. Aquí se pueden aplicar varios fórmulas para determinar esa relevancia, que se verán después. La más básica sería la frecuencia relativa del término en el documento. De esta manera, cada columna es un vector que representa un texto, y cada línea es un vector que representa los contextos de aparición de una palabra (cada documento es aquí un contexto de uso). La siguiente matriz representa las frecuencias absolutas de las palabras de dos documentos (doc1 y doc2), cada uno con tres palabras.</p>
+<p>doc1 <span class="math notranslate nohighlight">\(= \{casa, madera, mesa\}\)</span></p>
+<p>doc2 <span class="math notranslate nohighlight">\(= \{papel, rama, madera\}\)</span></p>
+<hr class="docutils" />
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        Doc 1   Doc 2 
+casa      1       0   
+madera    1       1   
+mesa      1       0   
+papel     0       1   
+rama      0       1   
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>De esta tabla se obtiene la siguiente matriz D:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D = \begin{pmatrix}
+  1 &amp; 0 \\
+  1 &amp; 1 \\
+  1 &amp; 0 \\
+  0 &amp; 1 \\
+  0 &amp; 1 
+\end{pmatrix}\end{split}\]</div>
+<p>De esta manera, los documentos ahora está representado como dos vectores:</p>
+<p><span class="math notranslate nohighlight">\(\vec{doc1} = \{1 1 1 0 0\}\)</span><br />
+<span class="math notranslate nohighlight">\(\vec{doc2} = \{0 1 0 1 1\}\)</span></p>
+<p>Y cada palabra o término está representado con su vector contextual:</p>
+<p><span class="math notranslate nohighlight">\(\vec{casa} = \{1 0\}\)</span><br />
+<span class="math notranslate nohighlight">\(\vec{madera} = \{1 1\}\)</span><br />
+<span class="math notranslate nohighlight">\(\vec{mesa} = \{1 0\}\)</span><br />
+<span class="math notranslate nohighlight">\(\vec{papel} = \{0 1\}\)</span>\<br />
+<span class="math notranslate nohighlight">\(\vec{rama} = \{0 1\}\)</span></p>
+</section>
+<section id="fundamentos-linguisticos">
+<h2>Fundamentos lingüísticos<a class="headerlink" href="#fundamentos-linguisticos" title="Permalink to this headline">#</a></h2>
+<p>Los modelos semánticos vectoriales asumen básicamente tres propuestas teóricas (Clarke 2011):</p>
+<ol>
+<li><p>La idea de Wittgenstein (1953) de que “meaning just is use” (Wittgenstein 1953);</p></li>
+<li><p>El concepto de <em>collocation</em> de Firth (1957) y su idea de que</p>
+<blockquote>
+<div><p>“you shall know a word by the company it keeps”;</p>
+</div></blockquote>
+</li>
+<li><p>La hipótesis distribucional de Harris (1968), según la cual:</p>
+<blockquote>
+<div><p>“words will occur in similar contexts if and only if they have similar meanings”.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>Todo ello se engloba dentro del concepto de “significado distribucional”. Este, por tanto, es el significado que una palabra asume cuando se usa en un contexto concreto y queda determinado a partir de las palabras de ese contexto con las que aparece. Esta inferencia semántica (determinar el significado de una palabra a partir de las palabras del contexto) es algo que hacemos constantemente. Mira las siguientes oraciones, ¿qué significado tiene <em>XXX</em> en cada una?</p>
+<blockquote>
+<div><p>Mañana iré al <em>XXX</em> a firmar la hipoteca, y ya de paso sacaré dinero del cajero.</p>
+</div></blockquote>
+<blockquote>
+<div><p>He intentado ponerme los <em>XXX</em> de mi hermano pero me vienen pequeños: mis pies son muy grandes y necesito una talla más.</p>
+</div></blockquote>
+</section>
+<section id="representacion-vectorial-del-significado">
+<h2>Representación vectorial del significado<a class="headerlink" href="#representacion-vectorial-del-significado" title="Permalink to this headline">#</a></h2>
+<p>El vector de una palabra como se ha mostrado antes representa el significado distribucional de una palabra ya que captura la relevancia de esa palabra (o término o token o lema, según se quiera llamar) en cada uno de los contextos (en este caso documentos) que forman la colección. Así, en la siguiente matriz término - documento:</p>
+<hr class="docutils" />
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>       doc1   doc2
+car     7      6
+taxi    5      6
+train   6      1
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>el significado de cada palabra sería el vector contextual:</p>
+<p><span class="math notranslate nohighlight">\(car = (7,6)\)</span><br />
+<span class="math notranslate nohighlight">\(taxi = (5,6)\)</span><br />
+<span class="math notranslate nohighlight">\(train = (6,1)\)</span></p>
+<p>Esto se puede representar en un espacio euclídeo (plano o lineal) mediante coordenadas cartesiana: los valores del vector se proyectan en los ejes de coordenadas, siendo la abscisa <span class="math notranslate nohighlight">\(x\)</span> el documento 1 la ordenada <span class="math notranslate nohighlight">\(y\)</span> el documento 2.</p>
+<p><img alt="cartesanio1" src="_images/cartesiano_1.png" /></p>
+<p><img alt="cartesanio2" src="_images/cartesiano_2.png" /></p>
+<p>Esto en un plano cartesiano de dos dimensiones. Si la colección está formada por <span class="math notranslate nohighlight">\(n-\)</span> documentos, obtendríamos un espacio <span class="math notranslate nohighlight">\(n\)</span>-dimensionales o multidimensionales en el que cada dimensión es un posible contexto.</p>
+<hr class="docutils" />
+<p>Para que este modelo vectorial represente el significado real de las palabras, hay que modelar bien:</p>
+<ul class="simple">
+<li><p>la representación del contexto (columnas o dimensiones),</p></li>
+<li><p>la representación de las palabras (filas de la matriz)</p></li>
+<li><p>los valores o pesos de cada palabra en cada contexto.</p></li>
+</ul>
+<section id="representacion-del-contexto">
+<h3>Representación del contexto<a class="headerlink" href="#representacion-del-contexto" title="Permalink to this headline">#</a></h3>
+<p>Cada contexto de la palabra será una dimensión de la matriz. El problema es cómo delimitar este contexto: ¿cuántas palabras forman el contexto?, ¿dónde está el límite del contexto?</p>
+<p>En el modelo de matriz término-documento que se utiliza en recuperación de información el contexto es todo el documento porque son documentos lo que quieren recuperar, pero se puede limitar a recuperación de pasajes, párrafos, etc. Otras opciones con motivación lingüística podrían ser:</p>
+<ul class="simple">
+<li><p>la oración,</p></li>
+<li><p>una ventana deslizante (un conjunto de <span class="math notranslate nohighlight">\(n\)</span> palabras delante y detrás de la término),</p></li>
+<li><p>el párrafo o cualquier otra unidad textual,</p></li>
+<li><p>el capítulo,</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>Por otro lado, además de la matriz término-documento que hemos visto (donde las columnas representan documentos y las filas palabras), se puede crear otro tipo de matriz: la llamad <strong>matriz de co-ocurrencias</strong> o <strong>matriz término-término</strong>. En estas matrices (normalmente cuadradas), tanto las columnas como las filas representan palabra, y los valores la relación entre esas dos palabras. Por ejemplo, en cuántos contextos aparecen esas dos palabras, como en el siguiente caso:</p>
+<hr class="docutils" />
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>       red   readable   blue
+car     5       0        1
+book    3       6        0
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Según esta matriz, la palabra “car” aparece el mismo contexto de la palabra “red” en cinco ocasiones (de un total de <span class="math notranslate nohighlight">\(N\)</span> contextos), no coincide nunca con la palabra “readable” en ningún contexto y solo en uno con la palabra “blue”. “book”, por su parte, aparece tres veces en el mismo contexto de “red”, seis en el mismo contexto de “readable” y ninguna con “blue”. En ocasiones estas matrices son cuadradas porque tienen los mismo términos en las filas y en las columnas.</p>
+<p>Se pueden plantear otros tipos de matrices. Turne y Pantel (2010), por ejemplo, plantean una matriz <em>Pair-Pattern</em> donde las filas son parejas de palabras <span class="math notranslate nohighlight">\(X:Y\)</span> (“carpenter:wood”) y las columnas son relaciones entre palabras co-ocurrentes (“X cut Y”).</p>
+<p>Sea como sea el tipo de matriz, es muy relevante dónde se sitúa el límite del contexto (el documento, el párrafo, la oración…)</p>
+</section>
+<section id="representacion-de-las-palabras">
+<h3>Representación de las palabras<a class="headerlink" href="#representacion-de-las-palabras" title="Permalink to this headline">#</a></h3>
+<p>Hasta ahora hemos estado hablando de “palabra” o “término”, pero como ya se vio en temas anteriores, el concepto de “palabra” es muy vago. Una matriz será más o menos representativa según se defina la palabra. Algunas opciones son (según vimos en sesiones anteriores):</p>
+<ul class="simple">
+<li><p>el token,</p></li>
+<li><p>la raíz (o <em>stem</em>),</p></li>
+<li><p>el lemas,</p></li>
+<li><p>el lema más la categoría gramatical,</p></li>
+<li><p>los token pero eliminando <em>stopwords</em>,</p></li>
+<li><p>solo nombres (o solo verbos, o solo adjetivos, etc.)</p></li>
+<li><p>el lema más su dependencia sintáctica,</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>Algunos de estos casos, como imagino ya sabrás, requieren pre-procesar el corpus con técnicas de PLN. Cuando son colecciones muy amplias, se suele trabar con el <em>token</em> o solo con la raíz de las palabras.</p>
+</section>
+<section id="calculo-de-los-valores-o-pesos">
+<h3>Cálculo de los valores o pesos<a class="headerlink" href="#calculo-de-los-valores-o-pesos" title="Permalink to this headline">#</a></h3>
+<p>Finalmente, el modelo semántico vectorial puede ser más o menos representativo según se calcule la relevancia (o peso) de la palabra en cada contexto.</p>
+<p>El caso más simple para medir la relevancia de una palabra en un contexto es la calcular la frecuencia ponderada: número de veces que la palabra aparece en el contexto, normalizado por el tamaño del contexto. Este modelo tiene, sin embargo, diversos problemas:</p>
+<ol class="simple">
+<li><p>Es muy dependiente del tamaño del contexto, que como hemos visto antes no está claro cómo limitarlo. En contexto pequeños se trabajaría con valores muy bajos (ceros y unos prácticamente).</p></li>
+<li><p>No discrimina la importancia real de cada palabra en el contexto, dado que hay palabra que siempre tienen frecuencias muy alta (como palabras de categorías cerradas, o nombres de uso muy común) frente a otras que siempre tienen bajas frecuencias.</p></li>
+<li><p>sobre estas últimas, el caso extremos es el fenómeno del <a class="reference external" href="https://en.wikipedia.org/wiki/Hapax_legomenon"><em>hapax legomenon</em></a>: la mayoría de las palabras de una colección de documntos aparece solo una vez (o con una frecuencia muy baja).</p></li>
+</ol>
+<p>Una solución elegante para determinar la relevancia de una palabra por su frecuencia sin caer en estos problemas es el famoso valor TF/IDF que pasamos a explicar a continuación.</p>
+<section id="tf-idf-term-frequency-inverse-document-frequency-sparck-jones-1972">
+<h4>TF/IDF: <em>term frequency / inverse document frequency</em> (Sparck Jones, 1972)<a class="headerlink" href="#tf-idf-term-frequency-inverse-document-frequency-sparck-jones-1972" title="Permalink to this headline">#</a></h4>
+<p>La idea intuitiva que subyace a este valor es que las palabras de uso muy común (aquellas que aparecen con alta frecuencia en prácticamente todos los documentos) no son discriminativas para determinar la importancia del documento. Tienen por tanto poca relevancia en su documento y por tanto su valor debe ser bajo. Las palabras que realmente son relevantes en un documento, las que lo caracterizan, son aquellas que tiene una frecuencia relativamente alta en un documento pero, al mismo tiempo, tiene una frecuencia relativamente baja o nula en el resto de documentos. Esto es lo que intenta modelar TF/IDF: dar más peso a las palabras con frecuencia relevante en unos documentos pero no en la totalidad de la colección de textos.</p>
+<p>TF/IDF son las siglas de “frecuencia del término por la frecuencia inversa del documento”. Así, en la fórmula nos encontramos con:</p>
+<ul class="simple">
+<li><p><em>Term frequency</em> (<span class="math notranslate nohighlight">\(tf(w,d)\)</span>): frecuencia relativa de una palabra <span class="math notranslate nohighlight">\(w\)</span> en un documento <span class="math notranslate nohighlight">\(d\)</span>.</p></li>
+<li><p><em>Document frequency</em> (<span class="math notranslate nohighlight">\(df(t)\)</span>): cantidad de documentos donde aparece una determinada palabra <span class="math notranslate nohighlight">\(w\)</span>.</p></li>
+<li><p><em>Inverse document frequency</em> (<span class="math notranslate nohighlight">\(idf(d,D)\)</span>): el valor determinante para saber la relevancia del documento es la inversa de la frecuencia de documentos donde aparece. Por tanto, se divide la cantidad toda de documentos <span class="math notranslate nohighlight">\(N\)</span> en la colección <span class="math notranslate nohighlight">\(D\)</span> entre la frecuencia del documento <span class="math notranslate nohighlight">\(df(t)\)</span>. Hay varias formas de obtener este valor. La más sencilla es logarítmica, tal que <span class="math notranslate nohighlight">\(idf(d,D)=log\frac{N}{df}\)</span></p></li>
+</ul>
+<p>Así, el valor tf-idf de la palabra <span class="math notranslate nohighlight">\(w\)</span> en un documento <span class="math notranslate nohighlight">\(d\)</span> en una colección de documentos <span class="math notranslate nohighlight">\(D\)</span> es:</p>
+<!-- $$w_t,_d = tf_t,_d · idf_t$$
+
+$$tf-idf_w = tf_w,_d · idf_t$$ -->
+<div class="math notranslate nohighlight">
+\[tfidf(w,d,D)=tf(t,d) \cdot idf(t,D)\]</div>
+</section>
+<section id="ppmi-point-wise-mutual-information-church-y-hanks-1990">
+<h4>PPMI: Point Wise Mutual Information (Church y Hanks 1990)<a class="headerlink" href="#ppmi-point-wise-mutual-information-church-y-hanks-1990" title="Permalink to this headline">#</a></h4>
+<p>Otra alternativa para medir el peso contextual de una palabra muy utilizada en PLN es el <em>Point Wise Mutual Information</em> o PPMI. Así como tf-idf es le estándar para medir la relevancia de las palabras en matrices término-documento, PMMI es la medida que se suele utilizar en matrices de coocurrencia término-término.</p>
+<p>La intuición detrás de PPMI es que la coocurrencia de dos palabras en el mismo contexto es relevante en la medida que podamos saber la posibilidad de que ambas palabras coocurran por casualidad. Si no coocurren en el mismo contexto por casualidad, es que esa coocurrencia es motivada y por tanto relevante.</p>
+<p>Así, PMMI mide la probabilidad de que dos palabras aparezcan en el mismo contexto, y lo divide por la probablidad de aparición de cada palabra por separado:</p>
+<div class="math notranslate nohighlight">
+\[PPMI(w,c)=log_2\frac{P(w,c)}{P(w)P(c)}\]</div>
+<hr class="docutils" />
+<p>Hoy día tf-idf y PPMI son medidas estándar para la representación vectorial del significado. Luego se verán otras propuestas para determinar la relevancia de cada palabra en el contexto donde aparece; pero antes hay que tratar el gran problema de los modelos semánticos vectoriales: la matriz dispersa.</p>
+</section>
+</section>
+<section id="matriz-dispersa-y-matriz-densa">
+<h3>Matriz dispersa y matriz densa<a class="headerlink" href="#matriz-dispersa-y-matriz-densa" title="Permalink to this headline">#</a></h3>
+<p>Dada las características de los idiomas, este tipo de matrices de coocurrencias (bien sean término-término o término-documento) que miden las relaciones contextuales entre palabras son siempre son matrices muy dispersas, es decir, son matrices en las que la mayoría de los valores con cero. Lo normal en un idioma es que dos palabras no compartan contexto. Las palabras que comparten contexto entre ellas son pocas, por lo que lo normal es que el valor entre dos palabras sea cero. Esto es un problema tanto desde punto de vista matemático como computacional: se generan estructuras muy grandes pero muy poco informativas.</p>
+<blockquote>
+<div><p><em>Sparse matrix</em>: la mayoría de los valores son ceros.</p>
+</div></blockquote>
+<p>La solución a este problema es transformar la matriz dispersa en una matriz densa (<em>dense matrix</em>), es decir, una matriz sin ceros donde todas las relaciones entre palabras tienen valor superior a 0. Este problema ha sido el principal interés en la investigación en los últimos treinta año. Vamos a comentar tres soluciones que han tenido especial relevancia.</p>
+<p>Una primera solución fue <a class="reference external" href="https://en.wikipedia.org/wiki/Latent_semantic_analysis"><em>Latent semantic analysis</em></a> o LSA (Landauer y Dumais 1997). Esta aproximación consigue reducir una matriz dispera en una matriz densa de 300 dimensiones mediante su descomposición en valores singulares (<a class="reference external" href="https://en.wikipedia.org/wiki/Singular_value_decomposition"><em>singular value decomposition</em></a>). Lo interesante de la matriz resultante no es solo que sea una matriz densa; sino que esa matriz densa, además de mantener las relaciones contextuales entre palabras, muestra relaciones semánticas “latentes”: relaciones semánticas entre palabras que a simple vista no se detectan. LSA, así, supuso un avance en semántica vectorial en las tres áreas de conocimiento implicadas: matemática, computación y lingüística.</p>
+<p>Años más tarde se propuso <a class="reference external" href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> o LDA, que veremos en la segunda parte de la Práctica 1.</p>
+<p>Finalmente, la búsqueda de matrices densas y la optimización de la representación contextual mediante vectores ha llevado a los <em>skip gramms</em>, que es la base de <em>Word2Vec</em> y de donde derivan los <em>word embeddings</em> y los modelos neuronales actuales. Para determinar la relevancia contextual entre dos palabras, la idea principal de los <em>skip gramms</em> es entrenar un clasificador con regresión logística que aprenda si una palabra formar parte o no del contexto de otra palabra. Como solo aprende si dos palabras comparten o no contexto, ese entrenamiento no necesita un corpus anotado a mano: basta con una amplia colección de documentos (cuanto más grande mejor). Y al final lo de menos es el clasificador: lo importante son los pesos que ha aprendido para cada palabra. Ese es su vector contextual, que ha demostrado tener gran capacidad de representación semántica. Esto es el inicio del <em>deep learning</em> que se verá en próximos temas.</p>
+</section>
+</section>
+<section id="interpretacion-semantica-distancia-y-similitud">
+<h2>Interpretación semántica: distancia y similitud.<a class="headerlink" href="#interpretacion-semantica-distancia-y-similitud" title="Permalink to this headline">#</a></h2>
+<p>El vector de una palabra en sí mismo no tiene un significado como podría tenerlo, por ejemplo, una definición. Decir que <em>casa</em> es <span class="math notranslate nohighlight">\(\{1, 4, 0, 0, 1\}\)</span> no es nada: ese vector sólo indica la relevancia de la palabra en cada contexto.</p>
+<p>¿Cómo se realiza, entonces, la interpretación de una palabra y oración en el modelo semántico vectorial? La interpretación en esta aproximación vectorial a la semántica distribucional se realiza por relaciones de <strong>similitud</strong> entre palabras, oraciones, fragmentos o documentos. Dos palabras con vectores contextuales similares implica que ambas palabras tienden a aparecer en los mismos contexto, y por tanto su significado está relacionado. Dos palabras cuyos vectores contextual sean muy diferentes implica que son palabras con significado dispar. Cualquier aplicación de semántica vectorial debe pensarse en términos de similitud entre palabras, grupos de palabras, textos, etc. y no tanto como una interpretación sustancial.</p>
+<p>La similitud se calcular según la distancia entre los vectores en el espacio vectorial: a menor distancia entre vectores, mayor similitud semántica. Si bien hay diferentes medidas para calcular la distancia entre vectores, las más utilizada es la distancia del coseno, que mide el ángulo entre dos vectores ambos con origen en <span class="math notranslate nohighlight">\(0,0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[cos(a,b) = \frac{a · b}{||a|| ||b||}\]</div>
+<p><img alt="cartesanio2" src="_images/cartesiano_2.png" /><!--{height="10cm"}--></p>
+<section id="conclusiones">
+<h3>Conclusiones<a class="headerlink" href="#conclusiones" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Representación formal del significado distribucional.</p></li>
+<li><p>El significado se represente mediante vectores dentro de un espacio semántica vectorial.</p></li>
+<li><p>El vector está formado por el peso de la palabra en cada uno de los contextos (documentos, oraciones, etc.). Modelos de representación.</p></li>
+<li><p>El proceso de interpretación se basa en la distancia entre vectores: similitud.</p></li>
+</ul>
+</section>
+</section>
+<section id="herramientas-y-recursos">
+<h2>Herramientas y recursos<a class="headerlink" href="#herramientas-y-recursos" title="Permalink to this headline">#</a></h2>
+<p>Para crear espacios vectoriales y calcular similitudes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://radimrehurek.com/gensim/">GENSIM</a></p></li>
+<li><p><a class="reference external" href="http://www.nltk.org/">NLTK</a></p></li>
+<li><p><a class="reference external" href="http://www.clips.ua.ac.be/pattern">Pattern</a></p></li>
+<li><p><a class="reference external" href="https://spacy.io/">SpaCy</a></p></li>
+</ul>
+<!--## Apéndice. Estudio de caso.
+
+Extracción de *topics* con *Topic Modeling*.
+
+[Acceso a la presentación](https://docs.google.com/presentation/d/e/2PACX-1vRhjksmebwfZ8CfMNCqp7ucPr0i--fPNCa6dqb0NH3jiMOQV1lSvnlnF7qptbtqEsA5O4IzpcJa-F9r/pub?start=false&loop=false&delayms=60000)-->
+</section>
+<section id="bibliografia">
+<h2>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this headline">#</a></h2>
+<p>Church, K. W. and P. Hanks. 1990. Word association norms, mutual information, and lexicography. <em>Computational Linguistics</em>, 16(1):22–29.</p>
+<p>David M. Blei (2012) “Probabilistic topic models” en <em>Communications of the ACM</em> vol. 55 (4), April 2012. Doi:10.1145/2133806.2133826
+<a class="reference external" href="https://dl.acm.org/doi/10.1145/2133806.2133826">https://dl.acm.org/doi/10.1145/2133806.2133826</a></p>
+<p>Juravsky y Martin (2020) <em>Speech and Language Processing</em>. <a class="reference external" href="https://web.stanford.edu/~jurafsky/slp3/">https://web.stanford.edu/~jurafsky/slp3/</a></p>
+<p>Landauer, T. K. &amp; Dumais, S. T. (1997). “A solution to Plato’s problem: The Latent Semantic Analysis theory of the acquisition, induction, and representation of knowledge”, <em>Psychological Review</em>, 104, 211-140</p>
+<p>Lorenzo, Ferrone  y Zanzotto Fabio Massimo (2020) “Symbolic, Distributed, and Distributional Representations for Natural Language Processing in the Era of Deep Learning: A Survey” en <em>Frontiers in Robotics and AI</em>, pags, 153. DOI 10.3389/frobt.2019.00153
+<a class="reference external" href="https://www.frontiersin.org/article/10.3389/frobt.2019.00153">https://www.frontiersin.org/article/10.3389/frobt.2019.00153</a></p>
+<p>Navarro Colorado, Borja (2021) “Sistemas de anotación semántica para corpus de español” en Giovanni Parodi, Pascual Cantos &amp; Lewis Howe (Editores) <em>The Routledge Handbook of Spanish Corpus Linguistics</em> Routledge (en prensa).</p>
+<p>Widdows, D. (2004) <em>Geometry and meaning</em>, CSLI.</p>
+</section>
+<section id="cuestionario-de-aprendizaje">
+<h2>Cuestionario de aprendizaje<a class="headerlink" href="#cuestionario-de-aprendizaje" title="Permalink to this headline">#</a></h2>
+<p>Una vez realizadas las lecturas, contesta las preguntas de este <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSec_eQ4ZecmSKNrPhNbuMkfhLko149ckC2qQzFxdmOapHvp8A/viewform?usp=sf_link">cuestionario</a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Universitat d'Alacant<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

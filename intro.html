@@ -1,0 +1,560 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Materiales de Minería de Textos &#8212; Minería de Textos</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Técnicas para la minería de textos" href="bloque2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo-master-ca.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Minería de Textos</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Materiales de Minería de Textos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque TÉCNICAS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque2.html">
+   1. Técnicas para la minería de textos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque PLN
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque1.html">
+   2. Introducción. Minería de textos y procesamiento del lenguaje natural
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque APLICACIONES
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3.html">
+   3. Aplicaciones de la minería de textos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/intro.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#universitat-d-alacant-curso-20242025">
+   Universitat d’Alacant, curso 2024–2025
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#novedades">
+   Novedades
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#actividades-previas">
+   Actividades previas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guia-docente-y-normas-del-curso">
+   Guía docente y normas del curso
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentacion-de-la-asignatura">
+   Presentación de la asignatura
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#para-saber-mas">
+     Para saber más
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Materiales de Minería de Textos</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#universitat-d-alacant-curso-20242025">
+   Universitat d’Alacant, curso 2024–2025
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#novedades">
+   Novedades
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#actividades-previas">
+   Actividades previas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guia-docente-y-normas-del-curso">
+   Guía docente y normas del curso
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentacion-de-la-asignatura">
+   Presentación de la asignatura
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#para-saber-mas">
+     Para saber más
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="materiales-de-mineria-de-textos">
+<h1>Materiales de Minería de Textos<a class="headerlink" href="#materiales-de-mineria-de-textos" title="Permalink to this headline">#</a></h1>
+<section id="universitat-d-alacant-curso-20242025">
+<h2>Universitat d’Alacant, curso 2024–2025<a class="headerlink" href="#universitat-d-alacant-curso-20242025" title="Permalink to this headline">#</a></h2>
+<p><em>«This is an exciting time to be working in speech and language processing», Daniel Jurafsky, James H. Martin, 2009</em></p>
+<p><em>«You shall know a word by the company it keeps», John Rupert Firth, 1957</em></p>
+</section>
+<section id="novedades">
+<h2>Novedades<a class="headerlink" href="#novedades" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-given tablita table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>27 Ene</p></td>
+<td><p>Se ha publicado la primera versión de los materiales de la asignatura. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.</p></td>
+</tr>
+<tr class="row-even"><td><p>20 Mar</p></td>
+<td><p>Se ha publicado la primera versión de materiales del <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3.html">BLOQUE APLICACIONES</a>. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan. <strong>La dinámica de las sesiones prácticas se gestionarán por el siguiente canal de <a class="reference external" href="https://discord.gg/jS8FV3Fg">Discord</a></strong>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>13 Abr</p></td>
+<td><p><strong>Primera entrega de prácticas del <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun">BLOQUE APLICACIONES</a> disponible en UACloud/Evaluaciones.</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p>25 May</p></td>
+<td><p><strong>Segunda entrega de prácticas del <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva">BLOQUE APLICACIONES</a> disponible en UACloud/Evaluaciones.</strong>.</p></td>
+</tr>
+</tbody>
+</table>
+<!--
+* - 14 May
+  - Se ha retrasado la fecha de entrega de la práctica del tercer bloque de la asignatura hasta el 27 de mayo.
+* - 17 Abr
+  - Se vuelve a usar este zona de novedades para hacer anuncios importantes. En particular, se ha añadido a la sección "{ref}`label_actividades_previas`" las tareas y cuestionario a realizar antes de la clase del 25 de abril.
+* - 09 Feb 
+  - La sección "{ref}`label_actividades_previas`" se ha actualizado con las tareas y cuestionario a realizar antes de la clase del 15 de febrero.
+* - 01 Feb 
+  - En la sección "{ref}`label_actividades_previas`" podrás ir encontrando cada semana las actividades a realizar antes de la siguiente clase presencial. Habrá también un enlace a un pequeño cuestionario que tienes que rellenar antes de las 23.59 del día anterior con tu cuenta *gcloud.ua.es*. Recuerda que estos cuestionarios contribuyen a la nota final. Ya tienes disponible las actividades y el cuestionario a realizar antes de la clase del 8 de febrero de 2024.
+-->
+</section>
+<section id="actividades-previas">
+<span id="label-actividades-previas"></span><h2>Actividades previas<a class="headerlink" href="#actividades-previas" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><strong>Antes de la clase del 08/05/2023: lee el <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html">Tema  4</a>; a continuación, contesta estos tests: <a class="reference external" href="https://forms.gle/St7f5jcVWgaczAgo6">test</a> (plazo límite: 23:59 horas del 23:59 del 07/05/2025).</strong></p></li>
+<li><p>Antes de la clase del 10/04/2023: lee el <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html">Tema  3</a>; a continuación, contesta estos tests: <a class="reference external" href="https://forms.gle/DiDRZYNCHMxyumAp8">test</a> (plazo límite: 23:59 horas del 23:59 del 09/04/2025).</p></li>
+<li><p>Antes de la clase del 03/04/2023: lee el <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t2_subaplicaciones-benchmarks.html">Tema  2</a> y <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t2.1_analisis_sentimientos.html">Tema  2.1 del BLOQUE APLICACIONES</a>; a continuación, contesta estos tests: <a class="reference external" href="https://forms.gle/LKLfipcuPSk6J9qt6">test1</a>  y <a class="reference external" href="https://forms.gle/576ddPgDEfcrYmS1A">test2</a> (plazo límite: 23:59 horas del 02/04/2025).</p></li>
+<li><p>Antes de la clase del 22/03/2023: lee el <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html">Tema  1 del BLOQUE APLICACIONES</a>; a continuación, contesta este <a class="reference external" href="https://forms.gle/A9VANxkdBd99Ly5j9">test</a> (plazo límite: 23:59 horas del 26/03/2025).</p></li>
+<li><p>Antes de la clase del 13/03/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase en la <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque1.html">pàgina de introducción</a> a la minería de textos y el procesamiento del lenguaje natural; a continuación, realiza este <a class="reference external" href="https://forms.gle/wXyDg91iMQp3Nh9LA">test</a> (plazo límite: 23:59 del 12/03/2025). Accede al test con tu cuenta de <code class="docutils literal notranslate"><span class="pre">gcloud.ua.es</span></code>.</p></li>
+<li><p>Antes de la clase del 06/03/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase en la <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque1.html">pàgina de introducción</a> a la minería de textos y el procesamiento del lenguaje natural; a continuación, realiza este <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSddNgxnLXLhWJWz7WKyQ7ME7Erfixc4k86FJtjHxpaMwa9emw/viewform">test</a> (plazo límite: 23:59 del 05/03/2025). Accede al test con tu cuenta de <code class="docutils literal notranslate"><span class="pre">gcloud.ua.es</span></code>.</p></li>
+<li><p>Antes de la clase del 27/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque2.html">página de técnicas</a> para la minería de textos; a continuación, realiza este <a class="reference external" href="https://forms.gle/yHuUBZrqxDrnARkM8">test</a> (plazo límite: 23:59 del 26/02/2025).</p></li>
+<li><p>Antes de la clase del 20/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque2.html">página de técnicas</a> para la minería de textos; a continuación, realiza este <a class="reference external" href="https://forms.gle/qJMmKi6KGhtKDJtYA">test</a> (plazo límite: 23:59 del 19/02/2025).</p></li>
+<li><p>Antes de la clase del 13/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque2.html">página de técnicas</a> para la minería de textos; a continuación, realiza este <a class="reference external" href="https://forms.gle/Eb3ZwwGxbQp88t4FA">test</a> (plazo límite: 23:59 del 12/02/2025); aprovecha para ir acabando también las actividades prácticas de la clase anterior.</p></li>
+<li><p>Antes de la clase del 06/02/2025: lee los contenidos y visualiza los vídeos que se detallan en el apartado correspondiente a esta clase de la <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque2.html">página de técnicas</a> para la minería de textos; a continuación, realiza este <a class="reference external" href="https://forms.gle/E1xzZHw6hzMWJaNr7">test</a> (plazo límite: 23:59 del 05/02/2025). Accede al test con tu cuenta de <code class="docutils literal notranslate"><span class="pre">gcloud.ua.es</span></code>.</p></li>
+</ul>
+<!--
+- Antes de la clase del 09/05/2023: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test12]  (plazo límite: 23:59 del 08/05/2023); termina también las actividades prácticas que tengas pendientes.
+- Antes de la clase del 02/05/2024: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test11] (plazo límite: 23:59 del 01/05/2024); termina también las actividades prácticas de la clase anterior.
+- Antes de la clase del 25/04/2024: lee los contenidos y visualiza los vídeos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test10] (plazo límite: 23:59 del 24/04/2024). Accede al test con tu cuenta de `gcloud.ua.es`. Nota: esta clase y las siguientes serán impartidas por un profesor diferente a los de las sesiones anteriores, pero hay que realizar actividades previas como cualquier otra semana.
+
+- Antes de la clase del 22/03/2023: lee el Tema 5 y 5.1; a continuación, contesta el siguiente test: [test][test08]  (plazo límite: 23:59 del 21/03/2023)
+
+- P.Ev2. [Evaluación 2 (común)](https://jaspock.github.io/mtextos2324/bloque3_ev.html#entrega-2-selectiva). Apertura el 22/02/2023 - Cierre 23:59 del 29/03/2023 - Fuera de plazo hasta 05/04/23.
+
+- Antes de la clase del 15/03/2023: lee el Tema 4; a continuación, contesta el siguiente test: [test][test07]  (plazo límite: 23:59 del 14/03/2023)
+
+ - Antes de la clase del 08/03/2023: lee el Tema 3; a continuación, contesta el siguiente test: [test][test06]  (plazo límite: 23:59 del 07/03/2023)
+
+- Antes de la clase del 01/03/2023: lee el Tema 2 y 2.1; a continuación, contesta estos tests: [test1][test04] y [test2][test05] (plazo límite: 23:59 del 28/02/2023)
+
+- P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2324/bloque3_ev.html#entrega-1-comun). Apertura el 22/02/2023 - Cierre 23:59 del 01/03/2023 - Fuera de plazo hasta 08/03/23.
+
+- Antes de la clase del 15/02/2023: lee los [apartados 5 y 6 del bloque 1](https://jaspock.github.io/mtextos2324/bloque1_3AnalisisSemantico.html), y luego contesta el siguiente [cuestionario][test02] (plazo límite: 23:59 horas del 14/02/2023).
+
+- Antes de la clase del 15/02/2024: leed los [apartados 5 y 6 del PDF con el contenido teórico del bloque 1](https://jaspock.github.io/mtextos2324/bloque1.html); a continuación, contestad este [segundo cuestionario][test02] (plazo límite: 23:59 horas del 14/02/2024).
+- (Completado) Antes de la clase del 08/02/2024: lee los [apartados 1, 2, 3 y 4 del PDF con el contenido teórico del bloque 1](https://jaspock.github.io/mtextos2324/bloque1.html); a continuación, contesta este [test][test01] (plazo límite: 23:59 horas del 07/02/2024).
+-->
+</section>
+<section id="guia-docente-y-normas-del-curso">
+<h2>Guía docente y normas del curso<a class="headerlink" href="#guia-docente-y-normas-del-curso" title="Permalink to this headline">#</a></h2>
+<p>Estos son los materiales de clase de la asignatura Minería de Textos, coordinada por el profesor <a class="reference external" href="https://cvnet.cpd.ua.es/curriculum-breve/es/perez-ortiz-juan-antonio/15404">Juan Antonio Pérez Ortiz</a> (<a class="reference external" href="https://twitter.com/japer3z">X</a>, <span class="xref myst">LinkedIn</span>) de la Universitat d’Alacant e impartida junto con este por los profesores <a class="reference external" href="https://cvnet.cpd.ua.es/curriculum-breve/es/espla-gomis-miquel/16262">Miquel Esplà Gomis</a> y <a class="reference external" href="https://cvnet.cpd.ua.es/curriculum-breve/es/gutierrez-vazquez-yoan/49618">Yoan Gutiérrez Vázquez</a>.</p>
+<p>Para obtener información sobre la evaluación de la asignatura puedes consultar la <a class="reference external" href="https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wlengua=es&amp;wcodasi=43459&amp;scaca=2024-25">guía docente</a>. Algunos aspectos adicionales que no están recogidos en la guía son los siguientes:</p>
+<ul class="simple">
+<li><p>Las prácticas se realizan individualmente o en parejas, según se indique en el enunciado de cada una de ellas. Cada uno de los tres bloques de la asignatura tendrá uno o más trabajos prácticos. Los trabajos del bloque de técnicas contarán un 40% en la nota final de las prácticas, los del bloque de lingüística computacional un 20% y un 40% los del bloque de aplicaciones</p></li>
+<li><p>La asistencia a prácticas es obligatoria. Se pasará lista en cada sesión presencial. Se puede tener un máximo de 3 faltas sin justificar. Si se acumulan más faltas no justificadas, no se podrá superar la parte de prácticas en la primera convocatoria, pero sí en la segunda (si se realizan las entregas correspondientes antes del día del examen) o en las otras convocatorias extraordinarias.</p></li>
+</ul>
+<p>El <a class="reference external" href="https://github.com/jaspock/mtextos2425">código fuente</a> de estas páginas, escrito en MyST para Jupyter Book, está disponible en Github.</p>
+<p>Puedes obtener una copia local de estas páginas (por ejemplo, para poder consultarlas sin conexión) ejecutando::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wget</span> <span class="o">--</span><span class="n">mirror</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">parent</span> <span class="o">--</span><span class="n">convert</span><span class="o">-</span><span class="n">links</span> <span class="o">--</span><span class="n">page</span><span class="o">-</span><span class="n">requisites</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jaspock</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">mtextos2425</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Pero ten en cuenta que su contenido irá cambiando a lo largo del curso.</p>
+</section>
+<section id="presentacion-de-la-asignatura">
+<h2>Presentación de la asignatura<a class="headerlink" href="#presentacion-de-la-asignatura" title="Permalink to this headline">#</a></h2>
+<p>La diferencia entre los términos <em>minería de textos</em> y <em>procesamiento del lenguaje natural</em> es un tanto difusa. Podríamos decir que la minería de textos es el proceso de descubrimiento de patrones y obtención de información relevante de grandes colecciones de textos. Al igual que en el concepto más amplio de minería de datos, el énfasis no es en la extracción (minado) de los datos en sí, sino en la extracción de patrones y conocimiento relevante. En el caso de la minería de textos, las fuentes de información son textos digitalizados, que no incluyen otras fuentes de información más estructurada como las bases de datos. El procesamiento del lenguaje natural, por otro lado, aplica técnicas lingüísticas, computacionales y de aprendizaje automático a datos en lenguaje natural, habitualmente en forma de texto o voz, para resolver tareas que requieren que el ordenador adquiera cierta <em>comprensión</em> sobre su contenido. El procesamiento de voz no se suele considerar parte de la minería de textos, pero esta se vale en la mayor parte de las situaciones de las técnicas de procesamiento del lenguaje natural para conseguir sus objetivos.</p>
+<p>La asignatura se centra en presentar los fundamentos, características y aplicaciones de las técnicas actuales para el procesamiento del lenguaje natural, pero no pretende entrar en excesivos detalles sobre modelos muy recientes ni estar completamente a la última, ya que el ritmo de aparición de sistemas que mejoran los resultados de los anteriores es extremadamente rápido (podríamos decir que semanal en muchos casos y mensual en otros). Como ejemplo, el conjunto de <em>benchmarks</em> llamado <a class="reference external" href="https://super.gluebenchmark.com/tasks/">SuperGLUE</a> quedó prácticamente <a class="reference external" href="https://www.microsoft.com/en-us/research/blog/microsoft-deberta-surpasses-human-performance-on-the-superglue-benchmark/">obsoleto en menos de dos años</a> por la sucesiva aparición de arquitecturas que conseguían cada vez mejores resultados en los problemas que incluía.</p>
+<p>La asignatura tiene tres bloques:</p>
+<ol class="simple">
+<li><p>(”<a class="reference internal" href="bloque2.html#label-tecnicas"><span class="std std-ref">Técnicas para la minería de textos</span></a>”) estudia con cierto nivel de detalle las arquitecturas neuronales más empleadas en el área.</p></li>
+<li><p>(”<a class="reference internal" href="bloque1.html#label-introduccion"><span class="std std-ref">Introducción. Minería de textos y procesamiento del lenguaje natural</span></a>”) introduce los fundamentos de la lingüística computacional.</p></li>
+<li><p>(”<a class="reference internal" href="bloque3.html#label-aplicaciones"><span class="std std-ref">Aplicaciones de la minería de textos</span></a>”) se discuten algunas de las aplicaciones más importantes del procesamiento del lenguaje natural.</p></li>
+</ol>
+<section id="para-saber-mas">
+<h3>Para saber más<a class="headerlink" href="#para-saber-mas" title="Permalink to this headline">#</a></h3>
+<p>Para ampliar lo aprendido en la asignatura puedes consultar algunas de estas fuentes en línea:</p>
+<ul class="simple">
+<li><p>“<a class="reference external" href="https://web.stanford.edu/~jurafsky/slp3/">Speech and language processing</a>” (borrador de la tercera edición).</p></li>
+<li><p>“<a class="reference external" href="http://d2l.ai/">Dive into deep learning</a>”.</p></li>
+<li><p>“The <a class="reference external" href="https://deeplearningmath.org/">mathematical</a> engineering of deep learning”</p></li>
+<li><p>Materiales del curso “<a class="reference external" href="http://web.stanford.edu/class/cs224n/">Natural language processing with deep learning</a>” de Stanford.</p></li>
+<li><p>Materiales del curso “<a class="reference external" href="https://www.youtube.com/playlist?list=PL8PYTP1V4I8AkaHEJ7lOOrlex-pcxS-XV">Neural nets for NLP</a>” de la Universidad Carnegie Mellon.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/tower_of_babel_xkcd_2421.png"><img alt="comic xkcd 2421" class="align-center" src="_images/tower_of_babel_xkcd_2421.png" style="width: 600px;" /></a>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="bloque2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Técnicas para la minería de textos</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Universitat d'Alacant<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
