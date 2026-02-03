@@ -15,6 +15,8 @@ Universitat d'Alacant, curso 2024–2025
 Novedades
 ---------
 
+<!--
+
 `````{list-table}
 :header-rows: 0
 :widths: 10 90
@@ -30,6 +32,8 @@ Novedades
   - **Segunda entrega de prácticas del [BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva) disponible en UACloud/Evaluaciones.**.
 `````
 
+-->
+
 <!--
 * - 14 May
   - Se ha retrasado la fecha de entrega de la práctica del tercer bloque de la asignatura hasta el 27 de mayo.
@@ -44,6 +48,8 @@ Novedades
 (label_actividades_previas)=
 Actividades previas
 -------------------
+
+<!--
 - **Antes de la clase del 08/05/2023: lee el [Tema  4](https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html); a continuación, contesta estos tests: [test][testb3.4] (plazo límite: 23:59 horas del 23:59 del 07/05/2025).**
 - Antes de la clase del 10/04/2023: lee el [Tema  3](https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html); a continuación, contesta estos tests: [test][testb3.3] (plazo límite: 23:59 horas del 23:59 del 09/04/2025).
 - Antes de la clase del 03/04/2023: lee el [Tema  2](https://jaspock.github.io/mtextos2425/bloque3_t2_subaplicaciones-benchmarks.html) y [Tema  2.1 del BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_t2.1_analisis_sentimientos.html); a continuación, contesta estos tests: [test1][testb3.2]  y [test2][testb3.2.1] (plazo límite: 23:59 horas del 02/04/2025).
@@ -54,6 +60,7 @@ Actividades previas
 - Antes de la clase del 20/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test12] (plazo límite: 23:59 del 19/02/2025).
 - Antes de la clase del 13/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test11] (plazo límite: 23:59 del 12/02/2025); aprovecha para ir acabando también las actividades prácticas de la clase anterior.
 - Antes de la clase del 06/02/2025: lee los contenidos y visualiza los vídeos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test10] (plazo límite: 23:59 del 05/02/2025). Accede al test con tu cuenta de `gcloud.ua.es`.
+--> 
 
 <!--
 - Antes de la clase del 09/05/2023: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test12]  (plazo límite: 23:59 del 08/05/2023); termina también las actividades prácticas que tengas pendientes.
@@ -118,19 +125,19 @@ Para obtener información sobre la evaluación de la asignatura puedes consultar
 [miquel url]: https://cvnet.cpd.ua.es/curriculum-breve/es/espla-gomis-miquel/16262
 [yoan url]: https://cvnet.cpd.ua.es/curriculum-breve/es/gutierrez-vazquez-yoan/49618
 [japerez_twitter]: https://twitter.com/japer3z
-[guía]: https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wlengua=es&wcodasi=43459&scaca=2024-25
+[guía]: https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wlengua=es&wcodasi=43459&scaca=2025-26
 
 - Las prácticas se realizan individualmente o en parejas, según se indique en el enunciado de cada una de ellas. Cada uno de los tres bloques de la asignatura tendrá uno o más trabajos prácticos. Los trabajos del bloque de técnicas contarán un 40% en la nota final de las prácticas, los del bloque de lingüística computacional un 20% y un 40% los del bloque de aplicaciones
 - La asistencia a prácticas es obligatoria. Se pasará lista en cada sesión presencial. Se puede tener un máximo de 3 faltas sin justificar. Si se acumulan más faltas no justificadas, no se podrá superar la parte de prácticas en la primera convocatoria, pero sí en la segunda (si se realizan las entregas correspondientes antes del día del examen) o en las otras convocatorias extraordinarias.
 
 El [código fuente][fuente] de estas páginas, escrito en MyST para Jupyter Book, está disponible en Github.
 
-[fuente]: https://github.com/jaspock/mtextos2425
+[fuente]: https://github.com/jaspock/mtextos2526
 
 Puedes obtener una copia local de estas páginas (por ejemplo, para poder consultarlas sin conexión) ejecutando::
 
 ```
-  wget --mirror --no-parent --convert-links --page-requisites https://jaspock.github.io/mtextos2425/
+  wget --mirror --no-parent --convert-links --page-requisites https://jaspock.github.io/mtextos2526/
 ```
 Pero ten en cuenta que su contenido irá cambiando a lo largo del curso.
 
