@@ -1,0 +1,62 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+root: intro
+format: jb-book
+defaults:
+  numbered: true
+parts:
+- caption: Bloque TÉCNICAS
+  chapters:
+  - file: bloque2
+- caption: Bloque PLN
+  chapters:
+  - file: bloque1
+#- caption: Bloque LINGCOMP
+#  chapters:
+#  - file: bloque1
+#  - file: bloque1_Practica1
+#  - file: bloque1_Practica2
+#  - file: bloque1_1Introduccion
+#  - file: bloque1_2CategorialSintactico
+#  - file: bloque1_Practica1
+#  - file: bloque1_3AnalisisSemantico
+#  - file: bloque1_4AnalisisSemanticoVectorial
+- caption: Bloque APLICACIONES
+  chapters:
+  - file: bloque3
+# - file: bloque3_t1_aplicaciones
+#  - file: bloque3_t2_subaplicaciones-benchmarks
+#  - file: bloque3_t2.1_analisis_sentimientos
+#  - file: bloque3_t3.1_metricas
+#  - file: bloque3_t4_centralizacion
+#  - file: bloque3_t5_automl
+#  - file: bloque3_t5.1_autogoal.md
+# - file: bloque3_p1_SA-Pipeline-Reviews 
+# - file: bloque3_p2_SA-Transformers-Basic
+#  - file: bloque3_p3_SA-Transformers-Training-FineTuning
+#  - file: bloque3_p4_SA-Transformers-Training-Custom
+#  - file: bloque3_p5-SA-Ensemble
+#  - file: bloque3_p6_SA-AutoGOAL
+#  - file: bloque3_ev
+#  - file: bloque2_historia
+#  - file: bloque2_embeddings
+#  - file: bloque2_recurrent
+#  - file: bloque2_transformer
+#  - file: bloque2_pretrained
+#  - file: bloque2_otros
+#  - file: bloque2_practica
+# - caption: Bloque 3
+#  chapters:
+#  - file: bloque2
+#- caption: Extras
+#  chapters:
+#  - file: content
+#  - file: markdown
+#  - file: notebooks
+- caption: Utilidades
+  chapters:
+  - file: doc_utils/colabEntornoLocal/web
+  #- file: doc_utils/creditosColab/web 
+  #  - file: notebooks
+
+
