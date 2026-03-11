@@ -8,7 +8,7 @@ Para la evaluación de este bloque el estudiante deberá realizar **DOS entregas
 
 * Seleccionar **UNO** de los ejercicios relizados en la [Práctica 1.1][p1] y entregarlo. Ajustarse a los criterios de evaluación descritos al final de este documento.
 
-### Entrega 2 (selectiva)
+### Entrega 2 (selectiva): --Previa confirmación de tema con el profesor--
 
 * **Opción A** (*para optar por una nota máxima de 8pts*): Seleccionar **UNO** de los ejercicios relizados en las [Práctica 2][p4] y [3][p7] y entregarlo. Ajustarse a los criterios de evaluación descritos al final de este documento.
 
