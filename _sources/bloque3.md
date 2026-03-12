@@ -136,8 +136,8 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 
   <!-- ============================================================
        CLASE 1: 16:00-20:00 (240 min)
-       T1(30) | IntroP1(30) | Libre(60) | Break(30) | Libre(45) | Expo(30) | Eval1(15)
-       %:     12.5   12.5    25           12.5         18.75       12.5       6.25
+       T1(30) | IntroP1(30) | Practica(45) | Break(30) | Practica(60) | Expo(30) | Eval1(15)
+       %:     12.5   12.5    18.75          12.5         25           12.5       6.25
   ============================================================ -->
   <div class="mt-class">
     <div class="mt-class-header">
@@ -158,20 +158,20 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
         <span class="lbl">Intro P1</span>
         <span class="dur">16:30-17:00</span>
       </div>
-      <div class="mt-seg s-libre"   style="width:25%"
-           title="Tiempo para hacer la pr&aacute;ctica P1 &middot; 17:00-18:00">
+      <div class="mt-seg s-libre"   style="width:18.75%"
+           title="Tiempo para hacer la pr&aacute;ctica P1 &middot; 17:00-17:45">
         <span class="lbl">Pr&aacute;ctica P1</span>
-        <span class="dur">17:00-18:00</span>
+        <span class="dur">17:00-17:45</span>
       </div>
       <div class="mt-seg s-break"   style="width:12.5%"
-           title="Descanso &middot; 18:00-18:30">
+           title="Descanso &middot; 17:45-18:15">
         <span class="lbl">Descanso</span>
-        <span class="dur">18:00-18:30</span>
+        <span class="dur">17:45-18:15</span>
       </div>
-      <div class="mt-seg s-libre"   style="width:18.75%"
-           title="Tiempo para hacer la pr&aacute;ctica P1 &middot; 18:30-19:15">
+      <div class="mt-seg s-libre"   style="width:25%"
+           title="Tiempo para hacer la pr&aacute;ctica P1 &middot; 18:15-19:15">
         <span class="lbl">Pr&aacute;ctica P1</span>
-        <span class="dur">18:30-19:15</span>
+        <span class="dur">18:15-19:15</span>
       </div>
       <div class="mt-seg s-expo"    style="width:12.5%"
            title="Exposici&oacute;n en directo &middot; 19:15-19:45">
@@ -188,8 +188,8 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
       <span class="mt-tick" style="left:0%">16:00</span>
       <span class="mt-tick" style="left:12.5%">16:30</span>
       <span class="mt-tick" style="left:25%">17:00</span>
-      <span class="mt-tick" style="left:50%">18:00</span>
-      <span class="mt-tick" style="left:62.5%">18:30</span>
+      <span class="mt-tick" style="left:43.75%">17:45</span>
+      <span class="mt-tick" style="left:56.25%">18:15</span>
       <span class="mt-tick" style="left:81.25%">19:15</span>
       <span class="mt-tick" style="left:93.75%">19:45</span>
       <span class="mt-tick" style="left:100%">20:00</span>
