@@ -2,7 +2,7 @@
 Materiales de Minería de Textos
 ===============================
 
-Universitat d'Alacant, curso 2024–2025
+Universitat d'Alacant, curso 2025–2026
 --------------------------------------
 
 *«This is an exciting time to be working in speech and language processing», Daniel Jurafsky, James H. Martin, 2009*
@@ -153,8 +153,8 @@ La asignatura se centra en presentar los fundamentos, características y aplicac
 
 La asignatura tiene tres bloques: 
 
-1. ("{ref}`label_tecnicas`") estudia con cierto nivel de detalle las arquitecturas neuronales más empleadas en el área.
-2. ("{ref}`label_introduccion`") introduce los fundamentos de la lingüística computacional.
+1. ("{ref}`label_introduccion`") introduce los fundamentos de la lingüística computacional.
+2. ("{ref}`label_tecnicas`") estudia con cierto nivel de detalle las arquitecturas neuronales más empleadas en el área.
 3. ("{ref}`label_aplicaciones`") se discuten algunas de las aplicaciones más importantes del procesamiento del lenguaje natural.
 
 ### Para saber más 
