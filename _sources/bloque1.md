@@ -35,7 +35,7 @@ Las actividades a realizar antes de clase son:
 - Ver el vídeo de la clase magistral de Yulia Tsvetkov sobre [análisis morfológico y flexión morfológica](https://www.youtube.com/watch?v=y9sVFrmGu0w). La duración de la clase es de 45 minutos 🕒️.
 - Ver vídeo de la clase magistral de Graham Neubig sobre [análisis de dependencias sintácticas](https://www.youtube.com/watch?v=dhlb2F1NyvE). Aunque el vídeo es más largo, sólo necesito que veáis la primera parte de la sesión, que acaba alrededor del minuto 38 🕒️.
 - Lectura del capítulo 6 del libro [*Speech and Language Processing*](https://web.stanford.edu/~jurafsky/slp3/6.pdf) de Daniel Jurafsky y James H. Martin (2024). Sólo necesitas leer hasta la sección 6.5, ya que los contenidos de secciones posteriores ya han sido cubiertas. Esta lectura te llevará alrededor de 1,25 horas 🕒️.
-- Tras acabar con las partes anteriores, realiza este [test de evaluación](https://forms.gle/wXyDg91iMQp3Nh9LA) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
+- Tras acabar con las partes anteriores, realiza este [test de evaluación](https://forms.gle/9tqDP2FNt4jfAGLy5) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 
 
 
