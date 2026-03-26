@@ -11,11 +11,11 @@ Universitat d'Alacant, curso 2025–2026
 
 
 % comentario
- 
+
+<!-- 
 Novedades
 ---------
 
-<!--
 
 `````{list-table}
 :header-rows: 0
@@ -49,6 +49,7 @@ Novedades
 Actividades previas
 -------------------
 
+- **Antes de la clase del 26/03/2026: prepara en casa los contenidos indicados en el [bloque 1](https://jaspock.github.io/mtextos2526/bloque1.html); a continuación, contesta el [test](https://forms.gle/9tqDP2FNt4jfAGLy5) de evaluación sobre estos contenidos (plazo límite: 23:59 horas del 25/03/2026).
 <!--
 - **Antes de la clase del 08/05/2023: lee el [Tema  4](https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html); a continuación, contesta estos tests: [test][testb3.4] (plazo límite: 23:59 horas del 23:59 del 07/05/2025).**
 - Antes de la clase del 10/04/2023: lee el [Tema  3](https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html); a continuación, contesta estos tests: [test][testb3.3] (plazo límite: 23:59 horas del 23:59 del 09/04/2025).
