@@ -39,7 +39,7 @@ Las actividades a realizar antes de clase son:
 
 
 
-En total, todo el trabajo previo a la clase te llevará alrededor de 6 horas 🕒️. Ten en cuenta que algunos contenidos sólo son accesibles de forma gratuita desde dentro de la red de la Universidad. Si los consultas desde casa, puedes utilizar la utilidad RED UA disponible en UACloud para acceder a ellos.
+En total, todo el trabajo previo a la clase te llevará alrededor de 6 horas 🕒️. Ten en cuenta que algunos contenidos sólo son accesibles de forma gratuita desde dentro de la red de la Universidad. Si los consultas desde casa, puedes utilizar la utilidad RED UA disponible en UACloud para acceder a ellos. En clase se repasarán algunos de ellos con [diapositivas](https://raw.githubusercontent.com/jaspock/mtextos2526/refs/heads/main/slides_intro.pdf).
 
 **Nota adicional**: Si la adquisición de textos de Internet te interesa y en el futuro quieres ampliar tus conocimientos, el libro [Web Scraping with Python](https://www.oreilly.com/library/view/web-scraping-with/9781098145347/) de Ryan Mitchell (actualmente en su tercera edición) me parece una guia exhaustiva y con un planteamiento muy práctico sobre las principales estrategias y retos para profundizar en esta tarea.
 
