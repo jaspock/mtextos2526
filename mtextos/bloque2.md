@@ -39,13 +39,6 @@ En la clase presencial (4 horas 🕒️ de duración), repasaremos los contenido
 2. **Regresor logístico multinomial**: estudia las probabilidades emitidas por el modelo ya entrenado para cada clase tanto con las frases del cuaderno como con algunas frases nuevas que tú propongas. Juega con frases que estén a medio camino entre diferentes temáticas.
 
 
-<div style="border: 2px solid #333; padding: 40px; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; gap: 20px;">
-  <span style="font-size: 2rem;">⚠️</span>
-  <p style="margin: 0; line-height: 1.5;">
-    Los contenidos a partir de este punto no son definitivos y podrían sufrir ligeras variaciones.
-  </p>
-</div>
-
 
 ## Segunda sesión (23/04/2026)
 
@@ -62,6 +55,13 @@ Las actividades a realizar antes de esta clase son:
 - Realización del [test de evaluación](https://forms.gle/Eb3ZwwGxbQp88t4FA) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 
 <!-- A continuación, lee el apartado 9.7 (solo este apartado) del capítulo ["Deep learning architectures for sequence processing"](https://web.archive.org/web/20221216193204/https://web.stanford.edu/~jurafsky/slp3/9.pdf); -->
+
+<div style="border: 2px solid #333; padding: 40px; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; gap: 20px;">
+  <span style="font-size: 2rem;">⚠️</span>
+  <p style="margin: 0; line-height: 1.5;">
+    Los contenidos a partir de este punto no son definitivos y podrían sufrir ligeras variaciones.
+  </p>
+</div>
 
 **<span style="font-size: 1.15em">Contenidos para la sesión presencial del 23/04/2026</span>**
 
