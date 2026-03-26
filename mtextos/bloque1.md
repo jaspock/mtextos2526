@@ -51,7 +51,7 @@ En total, todo el trabajo previo a la clase te llevará alrededor de 6 horas �
 ```
 - **Ejercicio 2**: La actividad práctica se centrará en explorar diferentes estrategias para la representación vectorial de textos. El trabajo a realizar se describe en  [el cuaderno CoLab](https://colab.research.google.com/drive/1kLEWK1kVXRJMY8v26Y4KeD1HcInDztOJ?usp=sharing) creado específicamente para esta sesión. Recordad que el el propio cuaderno de CoLab hay indicaciones sobre lo que se tiene que hacer y que explicar. *Se consideran más relevantes las reflexiones y conclusiones que el código* que se escriba aquí.
 
-**Distribución de la nota de esta actividad práctica**: El primer ejercicio supone un 30% de la nota de este bloque. El segundo ejercicio se divide en una primera parte que cuenta otro 30% y una segunda parte que cuenta un 40%.
+**Distribución de la nota correspondientes a las actividades de esta sesión**: El primer ejercicio supone un 30% de la nota de este bloque. El segundo ejercicio se divide en una primera parte que cuenta otro 30% y una segunda parte que cuenta un 40%.
 
 **Qué se debe entregar**: Se deberán entregar tres ficheros a través de la herramienta de Evaluación de UACloud: de la primera actividad, el script utilzado para descargar la información sobre los artículos de la revista PLN y el fichero JSON que los contiene, y de la segunda actividad, el cuaderno de CoLab completado.
 
