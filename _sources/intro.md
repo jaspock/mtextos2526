@@ -90,13 +90,13 @@ Actividades previas
 
 [test22]: https://forms.gle/wXyDg91iMQp3Nh9LA
 [test21]: https://docs.google.com/forms/d/e/1FAIpQLSddNgxnLXLhWJWz7WKyQ7ME7Erfixc4k86FJtjHxpaMwa9emw/viewform
-[introduccion]: https://jaspock.github.io/mtextos2425/bloque1.html
+[introduccion]: https://jaspock.github.io/mtextos2526/bloque1.html
 
 [test13]: https://forms.gle/yHuUBZrqxDrnARkM8
 [test12]: https://forms.gle/qJMmKi6KGhtKDJtYA
 [test11]: https://forms.gle/Eb3ZwwGxbQp88t4FA
 [test10]: https://forms.gle/E1xzZHw6hzMWJaNr7
-[tecnicas]: https://jaspock.github.io/mtextos2425/bloque2.html
+[tecnicas]: https://jaspock.github.io/mtextos2526/bloque2.html
 
 [test08]: https://docs.google.com/forms/d/e/1FAIpQLSehp7JODgvCf0kOrAyQvF9eYhjc6SQboEc7-wPfCPB12ufdzQ/viewform
 [test07]: https://docs.google.com/forms/d/e/1FAIpQLScsfrSzeMWqsAwFrYpl5zEgLOlDt9OZ0D5p8A2fN6Pyh1V3WA/viewform
