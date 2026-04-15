@@ -56,12 +56,6 @@ Las actividades a realizar antes de esta clase son:
 
 <!-- A continuación, lee el apartado 9.7 (solo este apartado) del capítulo ["Deep learning architectures for sequence processing"](https://web.archive.org/web/20221216193204/https://web.stanford.edu/~jurafsky/slp3/9.pdf); -->
 
-<div style="border: 2px solid #333; padding: 40px; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; gap: 20px;">
-  <span style="font-size: 2rem;">⚠️</span>
-  <p style="margin: 0; line-height: 1.5;">
-    Los contenidos a partir de este punto no son definitivos y podrían sufrir ligeras variaciones.
-  </p>
-</div>
 
 **<span style="font-size: 1.15em">Contenidos para la sesión presencial del 23/04/2026</span>**
 
@@ -73,6 +67,12 @@ En la clase presencial (4 horas 🕒️ de duración), repasaremos los contenido
 1. **Skip-grams**: modifica el código para que se pueda seleccionar el tamaño de la ventana L y realiza un pequeño estudio sobre cómo esto afecta a los embeddings obtenidos.
 2. **Skip-grams**: sustituye la parte del código que usa la notación de Einstein por una multiplicación convencional de matrices seguida de una operación que se quede con los valores que nos interesan. Compara los tiempos de ejecución de ambas implementaciones.
 
+<div style="border: 2px solid #333; padding: 40px; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; gap: 20px;">
+  <span style="font-size: 2rem;">⚠️</span>
+  <p style="margin: 0; line-height: 1.5;">
+    Los contenidos a partir de este punto no son definitivos y podrían sufrir ligeras variaciones.
+  </p>
+</div>
 
 ## Tercera sesión (30/04/2026)
 
