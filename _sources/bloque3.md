@@ -374,11 +374,11 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 ## Evaluación
 
 ### Teoría
- - [T1.C1. Cuestionario de evaluación](https://forms.gle/A9VANxkdBd99Ly5j9). Apertura el 20/03/2025- Cierre 23:59 del 26/03/2025.
- - [T2.C1. Cuestionario de evaluación](https://forms.gle/LKLfipcuPSk6J9qt6). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
- - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/576ddPgDEfcrYmS1A). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
- - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 03/04/2025- Cierre 23:59 del 09/04/2025.
- - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025.
+ - [T1.C1. Cuestionario de evaluación](https://forms.gle/A9VANxkdBd99Ly5j9). Apertura el 30/04/2026- Cierre 23:59 del 07/05/2026.
+ - [T2.C1. Cuestionario de evaluación](https://forms.gle/LKLfipcuPSk6J9qt6). Apertura el 07/05/2026- Cierre 23:59 del 14/05/2026.
+ - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/576ddPgDEfcrYmS1A).Apertura el 07/05/2026- Cierre 23:59 del 14/05/2026.
+ - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 14/05/2026- Cierre 23:59 del 21/05/2026.
+ - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 14/05/2026- Cierre 23:59 del 21/05/2026.
 <!--
  % - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
 
@@ -388,8 +388,8 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
  
 
 ### Prácticas
- - P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun). Apertura el 27/03/2025 - <strike>Cierre 23:59 del 10/04/2025</strike> Cierre 23:59 del 13/04/2025.
-- P.Ev2. [Evaluación 2 (selectiva)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva). Apertura el 10/04/2025 - Cierre 23:59 del 22/05/2025.
+ - P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2526/bloque3_ev.html#entrega-1-comun). Apertura el 07/05/2026 - Cierre 23:59 del 13/05/2026.
+- P.Ev2. [Evaluación 2 (selectiva)](https://jaspock.github.io/mtextos2526/bloque3_ev.html#entrega-2-selectiva). Apertura el 13/05/2026 - Cierre 23:59 del 28/05/2026.
 <!-- 
 -->
 
@@ -405,20 +405,20 @@ Gestión de créditos y máquinas virtuales con Google Colab: [Instrucciones](ht
 [javi url]: https://cvnet.cpd.ua.es/curriculum-breve/es/fernandez-martinez-javier/321
 [yoan url]: https://cvnet.cpd.ua.es/curriculum-breve/es/gutierrez-vazquez-yoan/49618  
 
-[t1]: https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html
-[t2]: https://jaspock.github.io/mtextos2425/bloque3_t2_subaplicaciones-benchmarks.html
-[t2.1]: https://jaspock.github.io/mtextos2425/bloque3_t2.1_analisis_sentimientos.html
-[t3]: https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html
-[t4]: https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html
-[t5]: https://jaspock.github.io/mtextos2425/bloque3_t5_automl.html
-[t5.1]: https://jaspock.github.io/mtextos2425/bloque3_t5.1_autogoal.html
+[t1]: https://jaspock.github.io/mtextos2526/bloque3_t1_aplicaciones.html
+[t2]: https://jaspock.github.io/mtextos2526/bloque3_t2_subaplicaciones-benchmarks.html
+[t2.1]: https://jaspock.github.io/mtextos2526/bloque3_t2.1_analisis_sentimientos.html
+[t3]: https://jaspock.github.io/mtextos2526/bloque3_t3.1_metricas.html
+[t4]: https://jaspock.github.io/mtextos2526/bloque3_t4_centralizacion.html
+[t5]: https://jaspock.github.io/mtextos2526/bloque3_t5_automl.html
+[t5.1]: https://jaspock.github.io/mtextos2526/bloque3_t5.1_autogoal.html
 
-[p1]: https://jaspock.github.io/mtextos2425/bloque3_p1_SA-Pipeline-Reviews.html
-[p2]: https://jaspock.github.io/mtextos2425/bloque3_p2_SA-Transformers-Basic.html
-[p3]: https://jaspock.github.io/mtextos2425/bloque3_p3_SA-Transformers-Training-FineTuning.html
-[p4]: https://jaspock.github.io/mtextos2425/bloque3_p4_SA-Transformers-Training-Custom.html
-[p5]: https://jaspock.github.io/mtextos2425/bloque3_p5-SA-Ensemble.html
-[p6]: https://jaspock.github.io/mtextos2425/bloque3_p6_SA-AutoGOAL.html
-[p7]: https://jaspock.github.io/mtextos2425/bloque3_p6-SA-Generativos.html
+[p1]: https://jaspock.github.io/mtextos2526/bloque3_p1_SA-Pipeline-Reviews.html
+[p2]: https://jaspock.github.io/mtextos2526/bloque3_p2_SA-Transformers-Basic.html
+[p3]: https://jaspock.github.io/mtextos2526/bloque3_p3_SA-Transformers-Training-FineTuning.html
+[p4]: https://jaspock.github.io/mtextos2526/bloque3_p4_SA-Transformers-Training-Custom.html
+[p5]: https://jaspock.github.io/mtextos2526/bloque3_p5-SA-Ensemble.html
+[p6]: https://jaspock.github.io/mtextos2526/bloque3_p6_SA-AutoGOAL.html
+[p7]: https://jaspock.github.io/mtextos2526/bloque3_p6-SA-Generativos.html
 
-[ev1]: https://jaspock.github.io/mtextos2425/bloque3_ev.html
+[ev1]: https://jaspock.github.io/mtextos2526/bloque3_ev.html
