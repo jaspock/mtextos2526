@@ -49,7 +49,8 @@ Novedades
 Actividades previas
 -------------------
 
-- **Antes de la clase del 23/04/2026:** lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test11] (plazo límite: 23:59 del 22/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. 
+- **Antes de la clase del 30/04/2026:** lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test13] (plazo límite: 23:59 del 29/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. 
+- Antes de la clase del 23/04/2026: lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test11] (plazo límite: 23:59 del 22/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. 
 - Antes de la clase del 15/04/2026: lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test10] (plazo límite: 23:59 del 14/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. Dado que entre la clase anterior y esta clase hay 3 semanas, quizás quieras, opcionalmente, aprovechar para ir avanzando en el estudio de los materiales de la sesión del 23/04/2026 que puedes encontrar más abajo en la misma página de técnicas.
 - Antes de la clase del 26/03/2026: prepara en casa los contenidos indicados en el [bloque 1](https://jaspock.github.io/mtextos2526/bloque1.html); a continuación, contesta el [test](https://forms.gle/9tqDP2FNt4jfAGLy5) de evaluación sobre estos contenidos (plazo límite: 23:59 horas del 25/03/2026).
 
