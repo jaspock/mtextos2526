@@ -5,6 +5,14 @@ Técnicas para la minería de textos
 
 En este bloque se aborda el estudio de algunos modelos neuronales utilizados para procesar textos. El profesor de este bloque es Juan Antonio Pérez Ortiz. 
 
+<!--
+<div style="border: 2px solid #333; padding: 40px; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; gap: 20px;">
+  <span style="font-size: 2rem;">⚠️</span>
+  <p style="margin: 0; line-height: 1.5;">
+    Los contenidos a partir de este punto no son definitivos y podrían sufrir ligeras variaciones.
+  </p>
+</div>
+-->
 
 El bloque comienza con un repaso del funcionamiento del regresor logístico, que nos servirá para asentar los conocimientos necesarios para entender posteriores modelos. A continuación se estudia con cierto nivel de detalle *skip-grams*, uno de los algoritmos para la obtención de *embeddings* incontextuales de palabras. Después se repasa el funcionamiento de las arquitecturas neuronales *feedforward* y se estudia su aplicación a modelos de lengua. El objetivo último es abordar el estudio de la arquitectura más importante de los sistemas actuales de procesamiento de textos: el transformer. Una vez estudiadas estas arquitecturas, finalizaremos con un análisis del funcionamiento de los modelos preentrenados (modelos fundacionales), en general, y de los modelos de lengua, en particular.
 
@@ -67,12 +75,14 @@ En la clase presencial (4 horas 🕒️ de duración), repasaremos los contenido
 1. **Skip-grams**: modifica el código para que se pueda seleccionar el tamaño de la ventana L y realiza un pequeño estudio sobre cómo esto afecta a los embeddings obtenidos.
 2. **Skip-grams**: sustituye la parte del código que usa la notación de Einstein por una multiplicación convencional de matrices seguida de una operación que se quede con los valores que nos interesan. Compara los tiempos de ejecución de ambas implementaciones.
 
+<!--
 <div style="border: 2px solid #333; padding: 40px; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; gap: 20px;">
   <span style="font-size: 2rem;">⚠️</span>
   <p style="margin: 0; line-height: 1.5;">
     Los contenidos a partir de este punto no son definitivos y podrían sufrir ligeras variaciones.
   </p>
 </div>
+-->
 
 ## Tercera sesión (30/04/2026)
 
@@ -80,10 +90,9 @@ En la clase presencial (4 horas 🕒️ de duración), repasaremos los contenido
 
 Las actividades a realizar antes de esta clase son:
 
-- Ampliar el estudio del transformer con la arquitectura codificador-descodificador completa, así como con la basada solo en codificador siguiendo para ello las secciones de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/attention2/). En total, esta parte debería llevarte unas 3 horas 🕒️ de trabajo.
-- Ahondar en la operativa de los grandes modelos de lengua 
+- Ampliar el estudio del transformer con la arquitectura codificador-descodificador completa, así como con la basada solo en codificador siguiendo para ello las secciones de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/attention2/). En total, esta parte debería llevarte unas 4 horas 🕒️ de trabajo.
+- Ahondar en el entrenamiento y operativa de los grandes modelos de lengua leyendo este [capítulo](https://web.archive.org/web/20260331100555/https://web.stanford.edu/~jurafsky/slp3/7.pdf) hasta la sección 7.5 incluida. Esta parte debería llevarte unas 3 horas 🕒️ de trabajo.
 
-- Realiza el [test de evaluación](https://forms.gle/qJMmKi6KGhtKDJtYA) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 - Realiza el [test de evaluación](https://forms.gle/yHuUBZrqxDrnARkM8) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 
 
