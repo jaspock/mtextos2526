@@ -374,11 +374,11 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 ## Evaluación
 
 ### Teoría
- - [T1.C1. Cuestionario de evaluación](https://forms.gle/A9VANxkdBd99Ly5j9). Apertura el 30/04/2026- Cierre 23:59 del 07/05/2026.
- - [T2.C1. Cuestionario de evaluación](https://forms.gle/LKLfipcuPSk6J9qt6). Apertura el 07/05/2026- Cierre 23:59 del 14/05/2026.
- - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/576ddPgDEfcrYmS1A).Apertura el 07/05/2026- Cierre 23:59 del 14/05/2026.
- - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 14/05/2026- Cierre 23:59 del 21/05/2026.
- - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 14/05/2026- Cierre 23:59 del 21/05/2026.
+ - [T1.C1. Cuestionario de evaluación](https://forms.gle/hDprxZx8uJWCdyCa8). Apertura el 30/04/2026- Cierre 23:59 del 07/05/2026.
+ - [T2.C1. Cuestionario de evaluación](https://forms.gle/DfCwMt215u7EavUy5). Apertura el 07/05/2026- Cierre 23:59 del 14/05/2026.
+ - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/kNBzXnmiYf6MuZr87).Apertura el 07/05/2026- Cierre 23:59 del 14/05/2026.
+ - [T3.C1. Cuestionario de evaluación](https://forms.gle/uiQwVWNPbd8yxamz9). Apertura el 14/05/2026- Cierre 23:59 del 21/05/2026.
+ - [T4.C1. Cuestionario de evaluación](https://forms.gle/hcYwVUz4q63qMYrY9). Apertura el 14/05/2026- Cierre 23:59 del 21/05/2026.
 <!--
  % - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
 
@@ -398,7 +398,7 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 <!-- 
 Gestión de créditos y máquinas virtuales con Google Colab: [Instrucciones](https://jaspock.github.io/mtextos2425/doc_utils/creditosColab/web.html)
 -->
-- Gestión de entornos Google Colab conectados a máquinas virtuales locales de Docker. [Instrucciones](https://jaspock.github.io/mtextos2425/doc_utils/colabEntornoLocal/web.html)
+- Gestión de entornos Google Colab conectados a máquinas virtuales locales de Docker. [Instrucciones](https://jaspock.github.io/mtextos2526/doc_utils/colabEntornoLocal/web.html)
 
 
 [abreu url]: https://scholar.google.es/citations?user=62u6KEkAAAAJ&hl=es
