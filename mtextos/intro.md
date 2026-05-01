@@ -48,8 +48,8 @@ Novedades
 (label_actividades_previas)=
 Actividades previas
 -------------------
-
-- **Antes de la clase del 30/04/2026:** lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test13] (plazo límite: 23:59 del 29/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. 
+- **Antes de la clase del 07/05/2026:** lee el [Tema  1 del BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2526/bloque3_t1_aplicaciones.html); a continuación, contesta este [test][testb3.1] (plazo límite: 23:59 horas del 06/05/2026). Accede al test con tu cuenta de `gcloud.ua.es`. 
+- Antes de la clase del 30/04/2026: lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test13] (plazo límite: 23:59 del 29/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. 
 - Antes de la clase del 23/04/2026: lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test11] (plazo límite: 23:59 del 22/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. 
 - Antes de la clase del 15/04/2026: lee los contenidos que se detallan en el apartado correspondiente a esta sesión de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test10] (plazo límite: 23:59 del 14/04/2026). Accede al test con tu cuenta de `gcloud.ua.es`. Dado que entre la clase anterior y esta clase hay 3 semanas, quizás quieras, opcionalmente, aprovechar para ir avanzando en el estudio de los materiales de la sesión del 23/04/2026 que puedes encontrar más abajo en la misma página de técnicas.
 - Antes de la clase del 26/03/2026: prepara en casa los contenidos indicados en el [bloque 1](https://jaspock.github.io/mtextos2526/bloque1.html); a continuación, contesta el [test](https://forms.gle/9tqDP2FNt4jfAGLy5) de evaluación sobre estos contenidos (plazo límite: 23:59 horas del 25/03/2026).
@@ -105,11 +105,11 @@ Actividades previas
 [test06]: https://docs.google.com/forms/d/e/1FAIpQLScD2m7ZzwwJvkIDOVICuSy8mfE1wsvSeKaFQ3B23cftJyjYcQ/viewform
 [test05]: https://docs.google.com/forms/d/e/1FAIpQLSccvm-ZXHONuDGX_Q8R1PmNWcb5eSbFde4NyX25uxPkNh4zNw/viewform
 [test04]: https://docs.google.com/forms/d/e/1FAIpQLSe_n1zPl8FzhjXoF7E4ucGoOfjSm-D8HcQZ2N5dtcy-Nudsgw/viewform
-[testb3.1]: https://forms.gle/A9VANxkdBd99Ly5j9
-[testb3.2]: https://forms.gle/LKLfipcuPSk6J9qt6
-[testb3.2.1]: https://forms.gle/576ddPgDEfcrYmS1A
-[testb3.3]: https://forms.gle/DiDRZYNCHMxyumAp8
-[testb3.4]: https://forms.gle/St7f5jcVWgaczAgo6
+[testb3.1]: https://forms.gle/hDprxZx8uJWCdyCa8
+[testb3.2]: https://forms.gle/DfCwMt215u7EavUy5
+[testb3.2.1]: https://forms.gle/kNBzXnmiYf6MuZr87
+[testb3.3]: https://forms.gle/uiQwVWNPbd8yxamz9
+[testb3.4]: https://forms.gle/hcYwVUz4q63qMYrY9
 
 
 
