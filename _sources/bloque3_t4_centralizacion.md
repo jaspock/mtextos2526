@@ -4,7 +4,7 @@ T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados
 
 ```{admonition} Nota
 :class: note
-Lee con atención el tema 4 del bloque 3. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 3.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. **Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025** (el día anterior a la clase presencial).
+Lee con atención el tema 4 del bloque 3. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 3.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. 
 
 Tiempo de dedicación: 3 horas (asíncrona) + 2 horas trabajo independiente
 ```
