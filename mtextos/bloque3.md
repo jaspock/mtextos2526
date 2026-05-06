@@ -671,6 +671,15 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 
 </div>
 
+## Material adicional
+
+Este curso, y como material complementario, hemos creado un cuaderno de [NotebookLM](https://notebooklm.google.com/notebook/7342ec65-e8e6-42b6-a92b-f986ea30031e?authuser=1) (herramienta gratuita de Google), en el que hemos incluido todo el material de este bloque 3.
+
+En ella, podéis encontrar desde ya, resumenes de audio (estilo podcast) de cada uno de los temsa de teoria, durando cada audio entre 20 y 30 minutos.
+
+Además, durante las sesiones de prácticas, utilizaremos las diapositivas generadas para repasar de forma breve y rápida cada uno de esos bloques de teoría.
+
+**⚠️ Atención:** Recuerda, los materiales generados por NotebookLM son complementarios y no sustituyen a los materiales oficiales del curso. Es importante que consultes siempre los materiales oficiales para obtener la información más precisa y actualizada sobre el curso, ya que los de NotebookLM, al ser generados por IA, pueden contener errores.
 
 ## Temario
 
