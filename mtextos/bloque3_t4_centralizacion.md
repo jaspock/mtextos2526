@@ -4,7 +4,7 @@ T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados
 
 ```{admonition} Nota
 :class: note
-Lee con atención el tema 4 del bloque 3. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 3.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. **Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025** (el día anterior a la clase presencial).
+Lee con atención el tema 4 del bloque 3. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 3.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. 
 
 Tiempo de dedicación: 3 horas (asíncrona) + 2 horas trabajo independiente
 ```
@@ -283,16 +283,24 @@ Es importante conocer que las **configuraciones** de modelos Transformer ya **cu
 ## Tecnologías de generación
 
 ### GPT
-GPT significa "Generative Pretrained Transformer". Es un modelo de lenguaje que utiliza técnicas de deep learning para generar texto de manera autónoma. GPT ha sido entrenado en una amplia cantidad de contenido textual. !Es **orientado a liberías**! Es decir, se puede incorporar el componente en tu propia aplicación.
+GPT significa "Generative Pretrained Transformer". Es un modelo de lenguaje basado en arquitecturas Transformer de tipo *decoder-only*, diseñado para generar texto de forma autónoma. Ha sido entrenado sobre grandes cantidades de datos textuales y puede integrarse en aplicaciones mediante APIs.
 
+- GPT-1 (2018): Es la primera versión de GPT, entrenado con [117 millones de parámetros](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf). Aunque es más limitado que versiones posteriores, puede generar texto coherente en contextos simples.  
+La arquitectura de GPT-1 consiste en 12 bloques de transformadores decodificadores. El texto se tokeniza mediante una [codificación de pares de bytes](https://arxiv.org/pdf/1508.07909.pdf). Utiliza [embeddings posicionales aprendidos](https://arxiv.org/pdf/1706.03762.pdf). La longitud máxima de contexto es de 512 tokens y la salida se genera mediante una capa softmax.
 
-- GPT-1: Es la primera versión de GPT, [entrenado con 117 millones de parámetros](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf). Aunque es significativamente más limitada que las versiones posteriores, aún es capaz de generar texto aceptable en muchos contextos. 
-La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transformadores decodificadores colocados uno tras otro (ej. 12x ver la imagen). Los datos de texto se codifican mediante una [codificación de pares de bytes](https://arxiv.org/pdf/1508.07909.pdf) adaptada a caracteres. La [incrustación de posición es aprendida, en lugar de la típica sinusoidal estática](https://arxiv.org/pdf/1706.03762.pdf). La longitud máxima para tokens consecutivos es 512. La capa superior es simplemente una capa softmax adaptada a la tarea de aprendizaje específica.
-- GPT-2: Es la segunda versión de GPT, con solo [1.5 mil millones de parámetros](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf). Es capaz de generar texto coherente y a menudo convincente. GPT-2 tiene básicamente la misma arquitectura que GPT-1, pero el modelo más grande contiene 48 bloques(48x ver la imagen) de transformadores. La segunda capa de normalización se mueve a la primera posición en un bloque y el último bloque contiene una capa de normalización adicional. Los pesos se inicializan de forma ligeramente diferente y se aumenta el tamaño del vocabulario. El número de tokens consecutivos se incrementa a 1024.
-- [GPT-3](https://arxiv.org/abs/2005.14165): Es la tercera versión de GPT y es uno de los modelos de lenguaje más grandes y avanzados jamás entrenados. Tiene más de [175 mil millones de parámetros](https://arxiv.org/abs/2005.14165), lo que le permite generar texto muy convincente en una amplia variedad de contextos. GPT-3 tiene la misma arquitectura que GPT-2, pero el número de bloques aumentó a 96 en el modelo más grande y el tamaño del contexto (número de tokens consecutivos) aumentó a 2048. Las [capas de autoatención de varios cabezales se alternan entre los típicos densos los escasos y los dispersos](https://arxiv.org/pdf/1904.10509.pdf). 
-- ...
+- GPT-2 (2019): Segunda versión, con modelos de hasta [1.5 mil millones de parámetros](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf). Genera texto más coherente y convincente. Mantiene la misma arquitectura base que GPT-1, pero el modelo más grande tiene 48 capas. Se aumenta el contexto a 1024 tokens y se introducen mejoras en normalización e inicialización de pesos.
 
-GPT-1 se entrena de manera autosupervisada (aprende a predecir la siguiente palabra en datos de texto) y se ajusta de manera de aprendizaje supervisado. GPT-2 se entrena de forma totalmente autosupervisada, centrándose en la transferencia de *zero-shot* y GPT-3 se entrena previamente de manera autosupervisada explorando un poco más *few-shots fine-tuning*.  
+- [GPT-3](https://arxiv.org/abs/2005.14165) (2020): Tercera versión con hasta [175 mil millones de parámetros](https://arxiv.org/abs/2005.14165). Mejora significativamente la capacidad de generación y generalización. Utiliza la misma arquitectura base (decoder Transformer), con hasta 96 capas y un contexto de 2048 tokens. Destaca por su capacidad de *in-context learning* (zero-shot, one-shot y few-shot) sin necesidad de fine-tuning.
+
+- GPT-3.5 (2022): Variante optimizada para diálogo y aplicaciones conversacionales mediante técnicas como RLHF.
+
+- GPT-4 (2023): Mejora el razonamiento y la precisión. Introduce capacidades multimodales (texto e imagen).
+
+- GPT-4o (2024): Modelo multimodal nativo capaz de procesar texto, audio, imagen y video en tiempo real.
+
+- GPT-5 (≈2025– ): Término no estandarizado públicamente; se refiere a futuras iteraciones más avanzadas de modelos GPT o versiones recientes no completamente especificadas.
+
+GPT-1 se entrena de forma autosupervisada (predicción del siguiente token) y posteriormente puede ajustarse con aprendizaje supervisado. GPT-2 continúa este enfoque, enfatizando el aprendizaje zero-shot. GPT-3 amplía estas capacidades mediante aprendizaje en contexto (*in-context learning*), sin requerir fine-tuning específico para cada tarea. A partir de GPT-3.5, se introducen técnicas de alineamiento como el aprendizaje por refuerzo con retroalimentación humana (RLHF), orientadas a mejorar la utilidad, seguridad y comportamiento del modelo en contextos conversacionales.
 
 ```{image} /images/bloque3/t4/GPT-1-2-3_architecture.png
 :alt: comic xkcd 2421
