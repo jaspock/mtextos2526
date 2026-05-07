@@ -12,7 +12,7 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
   </p>
 </div>
 -->
-La dinámica de las sesiones prácticas se gestionarán por el siguiente canal de [Discord](https://discord.gg/jS8FV3Fg).
+La dinámica de las sesiones prácticas se gestionarán por el siguiente canal de [Discord](https://discord.gg/XkYqMrCwH).
 
 ### Distribución de sesiones de laboratorio
 
